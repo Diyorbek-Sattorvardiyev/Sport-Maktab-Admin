@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fon">
+
+    <!-- Asosiy kontent -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <!-- Dashboard statistika kartlari -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardStats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:visibility="visible">
+
+                            <!-- Talabalar soni -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:id="@+id/txtStudentCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="248"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Talabalar"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <!-- Murabbiylar soni -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:id="@+id/txtCoachCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="32"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Murabbiylar"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <!-- Sport turlari soni -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:id="@+id/txtSportsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="14"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sport turlari"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <!-- Yangiliklar soni -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:id="@+id/txtNewsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="86"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yangiliklar"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Statistik grafiklar -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardCharts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/cardStats">
+
+                        <LinearLayout
+                            android:id="@+id/statistikLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Statistika"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <!-- Pie Chart -->
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/pieChart"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:layout_marginTop="16dp" />
+
+                            <!-- Bar Chart -->
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/barChart"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:layout_marginTop="16dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Tezkor boshqaruv kartasi -->
+                    <androidx.cardview.widget.CardView
+
+                        android:id="@+id/cardQuickManage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="60dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/cardCharts">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_margin="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tezkor boshqaruv"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <!-- Slaydr qo'shish -->
+                                    <LinearLayout
+                                        android:id="@+id/btnAddBanner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:background="@drawable/circle_background_primary"
+                                            android:padding="8dp"
+                                            android:src="@drawable/ic_banner" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Slaydr qo'shish"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <!-- Yangilik qo'shish -->
+                                    <LinearLayout
+                                        android:id="@+id/btnAddNews"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:background="@drawable/circle_background_primary"
+                                            android:padding="8dp"
+                                            android:src="@drawable/ic_news" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Yangilik qo'shish"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <!-- Sport turi qo'shish -->
+                                    <LinearLayout
+                                        android:id="@+id/btnAddSport"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:background="@drawable/circle_background_primary"
+                                            android:padding="8dp"
+                                            android:src="@drawable/ic_sports" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Sport turi qo'shish"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <!-- Murabbiy qo'shish -->
+                                    <LinearLayout
+                                        android:id="@+id/btnAddCoach"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:background="@drawable/circle_background_primary"
+                                            android:padding="8dp"
+                                            android:src="@drawable/ic_coach" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Murabbiy qo'shish"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <!-- Mashg'ulot qo'shish -->
+                                    <LinearLayout
+                                        android:id="@+id/btnAddSchedule"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:background="@drawable/circle_background_primary"
+                                            android:padding="8dp"
+                                            android:src="@drawable/ic_schedule" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Mashg'ulot qo'shish"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <!-- Natija qo'shish -->
+                                    <LinearLayout
+                                        android:id="@+id/btnAddResult"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:background="@drawable/circle_background_primary"
+                                            android:padding="8dp"
+                                            android:src="@drawable/ic_results" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Natija qo'shish"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Tizim ma'lumotlari va kerakli bo'limlar -->
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@color/white"
+
+                        app:layout_constraintTop_toBottomOf="@id/cardQuickManage"
+                        app:tabGravity="fill"
+                        app:tabMode="fixed"
+                        app:tabTextColor="@color/black" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:src="@android:drawable/ic_input_add" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

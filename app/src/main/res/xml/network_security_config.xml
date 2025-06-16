@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Lokal tarmoqdagi IP manzillar uchun cleartext HTTP ruxsat etilgan -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">172.20.2.196</domain>  <!-- Bu yerga o'zingizning lokal tarmoq IP manzilingizni yozing -->
+    </domain-config>
+</network-security-config>

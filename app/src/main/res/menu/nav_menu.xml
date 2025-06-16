@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_students"
+            android:icon="@drawable/ic_students"
+            android:title="Talabalar" />
+        <item
+            android:id="@+id/nav_coaches"
+            android:icon="@drawable/ic_coach"
+            android:title="Murabbiylar" />
+        <item
+            android:id="@+id/nav_sports"
+            android:icon="@drawable/ic_sports"
+            android:title="Sport turlari" />
+    </group>
+
+    <item android:title="Kontent boshqaruvi">
+        <menu>
+            <item
+                android:id="@+id/nav_schedule"
+                android:icon="@drawable/ic_schedule"
+                android:title="Mashg'ulot jadvali" />
+            <item
+                android:id="@+id/nav_results"
+                android:icon="@drawable/ic_results"
+                android:title="So'nggi natijalar" />
+            <item
+                android:id="@+id/nav_news"
+                android:icon="@drawable/ic_news"
+                android:title="Yangiliklar" />
+            <item
+                android:id="@+id/nav_banners"
+                android:icon="@drawable/ic_banner"
+                android:title="Slaydrlar" />
+        </menu>
+    </item>
+
+    <item android:title="Tizim">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="Sozlamalar" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Chiqish" />
+        </menu>
+    </item>
+</menu>

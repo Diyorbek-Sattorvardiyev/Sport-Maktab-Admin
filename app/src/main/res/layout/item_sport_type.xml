@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewSport"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="?attr/colorOutline"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivSportImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="Sport rasmi"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSportName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            app:layout_constraintStart_toEndOf="@id/ivSportImage"
+            app:layout_constraintEnd_toStartOf="@id/btnEditSport"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Futbol" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSportDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            app:layout_constraintStart_toEndOf="@id/ivSportImage"
+            app:layout_constraintEnd_toStartOf="@id/btnEditSport"
+            app:layout_constraintTop_toBottomOf="@id/tvSportName"
+            tools:text="Sport turi haqida qisqa ma'lumot. Bu yerda sport haqida qisqacha tavsif keltirilgan." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditSport"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Tahrirlash"
+            app:icon="@drawable/ic_edit"
+            app:iconTint="?attr/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@id/btnDeleteSport"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteSport"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="O'chirish"
+            app:icon="@drawable/ic_delete"
+            app:iconTint="?attr/colorError"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

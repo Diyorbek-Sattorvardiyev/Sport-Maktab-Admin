@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fon">#F0F0F0 </color>
+    <color name="primary">#0d6efd</color>
+    <color name="colorPrimary">#0d6efd</color>
+    <color name="colorPrimaryLight">#F0F0F0</color>
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#2661FA</color>
+    <color name="loginBkColor">#f0f0f0</color>
+    <color name="ripple_color">#2E6AD1</color> <!-- Qizil -->
+    <color name="colorError">#DB281B</color> <!-- Qizil -->
+    <color name="primary_variant">#F0F0F0</color>
+    <color name="secondary">#F0F0F0</color>
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+</resources>

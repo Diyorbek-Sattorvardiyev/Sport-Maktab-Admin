@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Orqa fon rangi -->
+    <solid android:color="@color/fon"/>
+
+    <!-- Qirralarning radiusi -->
+    <corners android:radius="5dp"/>
+
+    <!-- Chegara (stroke) -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/primary"/>
+
+    <!-- Ichki padding -->
+    <padding
+        android:left="12dp"
+        android:top="8dp"
+        android:right="12dp"
+        android:bottom="8dp"/>
+</shape>
